@@ -14,5 +14,5 @@
 // 
 
 message Customer {
-    double cartLength;
+    double servTime;
 }

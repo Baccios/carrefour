@@ -23,9 +23,6 @@ void Till::initialize()
     this->beep_ = new cMessage("beep");
     this->queue_ = new cQueue("line");
     this->processing_ = NULL;
-
-    //Note: the parent network is required to have a parameter named "capacity"
-    this->capacity_= getParentModule()->par("capacity");
 }
 
 void Till::handleMessage(cMessage *msg)
@@ -59,8 +56,7 @@ void Till::handleBeep(cMessage *msg){
 }
 
 void Till::serveCustomer(Customer *msg) {
-    double cartLength = msg->getcartLength();
-    double procTime = cartLength/this->capacity_;
+    double procTime = msg->getServtime();
     this->processing_ = msg;
     this->scheduleAt(simTime() + procTime, this->beep_);
 }
