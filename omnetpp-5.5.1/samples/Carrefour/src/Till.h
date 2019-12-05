@@ -24,7 +24,6 @@ using namespace omnetpp;
 class Till : public cSimpleModule
 {
 private:
-    double capacity_;
     cQueue* queue_;
     cMessage* processing_;
     cMessage* beep_;
