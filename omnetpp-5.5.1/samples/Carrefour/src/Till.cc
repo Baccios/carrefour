@@ -56,7 +56,7 @@ void Till::handleBeep(cMessage *msg){
 }
 
 void Till::serveCustomer(Customer *msg) {
-    double procTime = msg->getServtime();
+    double procTime = msg->getServTime();
     this->processing_ = msg;
     this->scheduleAt(simTime() + procTime, this->beep_);
 }
