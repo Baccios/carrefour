@@ -15,5 +15,4 @@
 
 message Departure {
     int tillPosition;
-    int customersLeft;
 }

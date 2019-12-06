@@ -15,22 +15,10 @@
 
 package carrefour;
 
-simple Till
+simple Decider
 {
-    parameters:
-        int position;
     gates:
-        input in;
+        input customer_in;
+        input ack_in @directIn;
+        output out[];
 }
-
-
-
-
-
-
-
-
-
-
-
-

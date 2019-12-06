@@ -13,24 +13,28 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package carrefour;
+#ifndef __CARREFOUR_DECIDER_H_
+#define __CARREFOUR_DECIDER_H_
 
-simple Till
+#include <omnetpp.h>
+
+
+using namespace omnetpp;
+
+class Decider : public cSimpleModule
 {
-    parameters:
-        int position;
-    gates:
-        input in;
-}
+  private:
+    cQueue* queue_;
+    int* tillCustomers_;
+    int tillTotalNumber_;
+    int policy_;
+    void checkTillsAndPossiblySendCustomer(cMessage *msg = NULL);
+    void handleMessageP1(cMessage *msg);
+    void handleMessageP2(cMessage *msg);
+  protected:
+    virtual void initialize();
+    virtual void handleMessage(cMessage *msg);
+    void ~Decider();
+};
 
-
-
-
-
-
-
-
-
-
-
-
+#endif

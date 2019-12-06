@@ -23,13 +23,13 @@ using namespace omnetpp;
 
 class Till : public cSimpleModule
 {
-private:
+  private:
     cQueue* queue_;
     cMessage* processing_;
     cMessage* beep_;
     void serveCustomer(Customer* msg);
     void serveNextCustomer();
-protected:
+  protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
     void handleBeep(cMessage* msg);

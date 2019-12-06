@@ -23,6 +23,9 @@ void Till::initialize()
     this->beep_ = new cMessage("beep");
     this->queue_ = new cQueue("line");
     this->processing_ = NULL;
+
+    //Note: the parent network is required to have a parameter named "capacity"
+    this->capacity_= getParentModule()->par("capacity");
 }
 
 void Till::handleMessage(cMessage *msg)
@@ -49,14 +52,15 @@ void Till::handleCustomer(Customer *msg) {
 
 void Till::handleBeep(cMessage *msg){
     Departure *dep = new Departure("departure");
-    dep->setCustomersLeft(this->queue_->getLength());
     dep->setTillPosition(par("position"));
-    this->send(dep, "out");
+    //Note: the parent network is required to call the Decider instance "decider"
+    cModule *targetModule = getParentModule()->getSubmodule("decider");
+    this->sendDirect(dep, targetModule, "ack_in");
     serveNextCustomer();
 }
 
 void Till::serveCustomer(Customer *msg) {
-    double procTime = msg->getServTime();
+    double procTime = msg->getServTime();//cartLength/capacity;
     this->processing_ = msg;
     this->scheduleAt(simTime() + procTime, this->beep_);
 }
@@ -70,8 +74,8 @@ void Till::serveNextCustomer() {
     else {
         this->processing_ = NULL;
     }
-    if(old != NULL)
-        delete old;
+
+    delete old;
 }
 
 void Till::~Till() {
