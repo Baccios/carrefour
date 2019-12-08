@@ -40,7 +40,8 @@ void Generator::handleMessage(cMessage *msg){
     //put some items in the cart of the customer
     if(itemsInCartDistribution_ == 0){
         //exponential distribution
-        cust->setServTime(exponential(meanItemsInACart_));
+        //NOTE: Using RNG #1 to generate the flow of service times
+        cust->setServTime(exponential(meanItemsInACart_, 1));
     }else{
         EV << "This type of distribution for items in a cart is not supported yet!";
     }
@@ -51,7 +52,8 @@ void Generator::handleMessage(cMessage *msg){
     //wait some time before generating next customer
     if(interArrivalDistribution_ == 0){
         //exponential distribution
-        scheduleAt(simTime()+exponential(meanInterArrivalTime_), beep_);
+        //NOTE: Using RNG #0 to generate the flow of arrivals
+        scheduleAt(simTime()+exponential(meanInterArrivalTime_, 0), beep_);
     }else{
         EV << "This type of distribution for interarrival times is not supported yet!";
     }
