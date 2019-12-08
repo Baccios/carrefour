@@ -13,28 +13,28 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __CARREFOUR_DECIDER_H_
-#define __CARREFOUR_DECIDER_H_
+#ifndef __CARREFOUR_GENERATOR_H_
+#define __CARREFOUR_GENERATOR_H_
 
 #include <omnetpp.h>
 
-
 using namespace omnetpp;
 
-class Decider : public cSimpleModule
+/**
+ * TODO - Generated class
+ */
+class Generator : public cSimpleModule
 {
   private:
-    cQueue* queue_;
-    int* tillCustomers_;
-    int tillsNumber_;
-    int policy_;
-    void checkTillsAndPossiblySendCustomer(cMessage *msg = NULL);
-    void handleMessageP1(cMessage *msg);
-    void handleMessageP2(cMessage *msg);
+    double meanInterArrivalTime_;
+    double meanItemsInACart_;
+    int interArrivalDistribution_;
+    int itemsInCartDistribution_;
+    cMessage* beep_;
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
-    void ~Decider();
+    void ~Generator();
 };
 
 #endif

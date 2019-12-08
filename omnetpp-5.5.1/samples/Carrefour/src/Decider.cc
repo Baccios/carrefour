@@ -20,11 +20,11 @@ Define_Module(Decider);
 
 void Decider::initialize()
 {
-    //Note: the parent network is required to have a parameter named "tillTotalNumber" and "policy"
+    //Note: the parent network is required to have a parameter named "tillsNumber" and "policy"
     policy_= getParentModule()->par("policy");
-    tillTotalNumber_= getParentModule()->par("tillTotalNumber");
-    tillCustomers_= new int [tillTotalNumber_];
-    memset(tillCustomers_, 0x00, tillTotalNumber_);
+    tillsNumber_= getParentModule()->par("tillsNumber");
+    tillCustomers_= new int [tillsNumber_];
+    memset(tillCustomers_, 0x00, tillsNumber_);
     if(policy_==1)
         this->queue_ = new cQueue("line");//P2 doesn't need any queue in the decider
 
@@ -68,14 +68,14 @@ void Decider::checkTillsAndPossiblySendCustomer(cMessage *msg = NULL){
     if(!msg)
         msg = queue_->pop();
     int destTill;
-    for(destTill = 0;destTill < tillTotalNumber_; destTill++){
+    for(destTill = 0;destTill < tillsNumber_; destTill++){
         //(tillCustomers_[destTill] > 0) ? (continue) : (break);
         if(tillCustomers_[destTill] > 0)
             continue;
         else
             break;
     }
-    if(destTill == tillTotalNumber_)
+    if(destTill == tillsNumber_)
         queue_->insert(msg); //never insert again the msg that I have extracted (explained into 1^)
     else{
         tillCustomers_[destTill]++;
@@ -86,7 +86,7 @@ void Decider::checkTillsAndPossiblySendCustomer(cMessage *msg = NULL){
 void Decider::handleMessageP2(cMessage *msg){
     if(strcmp(msg->getName(),"newCustomer") == 0){
         int destTill=0;
-        for(int i=0; i<tillTotalNumber_ ; i++)
+        for(int i=0; i<tillsNumber_ ; i++)
             if(tillCustomers_[i] < tillCustomers_[destTill])
                 destTill = i;
         tillCustomers_[destTill]++;
@@ -101,7 +101,7 @@ void Decider::handleMessageP2(cMessage *msg){
     }
 }
 
-void Decider::~Decider() {
+Decider::~Decider() {
     delete[] tillCustomers_;
     if(policy_==2)
         return; //no queue has been instantiated
