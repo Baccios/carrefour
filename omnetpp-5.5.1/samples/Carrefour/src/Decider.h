@@ -26,7 +26,7 @@ class Decider : public cSimpleModule
   private:
     cQueue* queue_;
     int* tillCustomers_;
-    int tillsNumber_;
+    int tillTotalNumber_;
     int policy_;
     void checkTillsAndPossiblySendCustomer(cMessage *msg = NULL);
     void handleMessageP1(cMessage *msg);
