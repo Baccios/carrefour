@@ -17,6 +17,8 @@
 #define __CARREFOUR_DECIDER_H_
 
 #include <omnetpp.h>
+#include"Customer_m.h"
+#include"Departure_m.h"
 
 
 using namespace omnetpp;
@@ -34,7 +36,7 @@ class Decider : public cSimpleModule
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
-    void ~Decider();
+    ~Decider();
 };
 
 #endif

@@ -14,7 +14,6 @@
 // 
 
 #include "Generator.h"
-#include "Customer.msg"
 
 Define_Module(Generator);
 
@@ -36,7 +35,7 @@ void Generator::initialize(){
 }
 
 void Generator::handleMessage(cMessage *msg){
-    Customer* cust = new Customer();
+    Customer* cust = new Customer("newCustomer");
 
     //put some items in the cart of the customer
     if(itemsInCartDistribution_ == 0){
@@ -58,6 +57,6 @@ void Generator::handleMessage(cMessage *msg){
     }
 }
 
-void Generator::~Generator(){
+Generator::~Generator(){
     delete beep_;
 }

@@ -35,7 +35,10 @@ network Carrefour
     submodules:
         generator: Generator;
         decider: Decider;
-        tills[tillsNumber]: Till;
+        tills[tillsNumber]: Till{
+            parameters:
+                position = index;
+        }
     connections:
         generator.out --> decider.customer_in;
         for j=0..(sizeof(tills)-1) {

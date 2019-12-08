@@ -41,7 +41,7 @@ void Till::handleMessage(cMessage *msg)
 void Till::handleCustomer(Customer *msg) {
 
     //if the till is empty the customer gets served
-    if(this->processing == NULL && this->queue_->isEmpty()) {
+    if(this->processing_ == NULL && this->queue_->isEmpty()) {
         serveCustomer(msg);
     }
     //otherwise it gets enqueued
@@ -78,7 +78,7 @@ void Till::serveNextCustomer() {
     delete old;
 }
 
-void Till::~Till() {
+Till::~Till() {
     delete this->beep_;
     while(!this->queue_->isEmpty()) {
         Customer* tmp = check_and_cast<Customer*>(this->queue_->pop());

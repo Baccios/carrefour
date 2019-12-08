@@ -22,7 +22,7 @@ void Decider::initialize()
 {
     //Note: the parent network is required to have a parameter named "tillTotalNumber" and "policy"
     policy_= getParentModule()->par("policy");
-    tillTotalNumber_= getParentModule()->par("tillTotalNumber");
+    tillTotalNumber_= getParentModule()->par("tillsNumber");
     tillCustomers_= new int [tillTotalNumber_];
     memset(tillCustomers_, 0x00, tillTotalNumber_);
     if(policy_==1)
@@ -64,9 +64,9 @@ void Decider::handleMessageP1(cMessage *msg){
     }
 }
 
-void Decider::checkTillsAndPossiblySendCustomer(cMessage *msg = NULL){
+void Decider::checkTillsAndPossiblySendCustomer(cMessage *msg){
     if(!msg)
-        msg = queue_->pop();
+        msg = check_and_cast<cMessage*>(queue_->pop());
     int destTill;
     for(destTill = 0;destTill < tillTotalNumber_; destTill++){
         //(tillCustomers_[destTill] > 0) ? (continue) : (break);
@@ -101,7 +101,7 @@ void Decider::handleMessageP2(cMessage *msg){
     }
 }
 
-void Decider::~Decider() {
+Decider::~Decider() {
     delete[] tillCustomers_;
     if(policy_==2)
         return; //no queue has been instantiated

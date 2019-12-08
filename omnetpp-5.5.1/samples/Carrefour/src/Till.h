@@ -17,6 +17,8 @@
 #define __CARREFOUR_TILL_H_
 
 #include <omnetpp.h>
+#include"Customer_m.h"
+#include"Departure_m.h"
 
 using namespace std;
 using namespace omnetpp;
@@ -25,8 +27,9 @@ class Till : public cSimpleModule
 {
   private:
     cQueue* queue_;
-    cMessage* processing_;
+    Customer* processing_;
     cMessage* beep_;
+    double capacity_;
     void serveCustomer(Customer* msg);
     void serveNextCustomer();
   protected:
@@ -34,7 +37,7 @@ class Till : public cSimpleModule
     virtual void handleMessage(cMessage *msg);
     void handleBeep(cMessage* msg);
     void handleCustomer(Customer* msg);
-    void ~Till();
+    ~Till();
 };
 
 #endif
