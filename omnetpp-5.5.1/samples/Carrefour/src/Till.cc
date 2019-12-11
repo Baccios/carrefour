@@ -79,9 +79,12 @@ void Till::serveNextCustomer() {
 }
 
 Till::~Till() {
-    delete this->beep_;
+    cancelAndDelete(this->beep_);
     while(!this->queue_->isEmpty()) {
         Customer* tmp = check_and_cast<Customer*>(this->queue_->pop());
         delete tmp;
+    }
+    if(processing_) {
+        delete processing_;
     }
 }
