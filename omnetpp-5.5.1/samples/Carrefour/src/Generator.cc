@@ -60,5 +60,5 @@ void Generator::handleMessage(cMessage *msg){
 }
 
 Generator::~Generator(){
-    delete beep_;
+    cancelAndDelete(beep_);
 }
