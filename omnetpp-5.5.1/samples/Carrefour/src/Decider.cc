@@ -24,7 +24,7 @@ void Decider::initialize()
     policy_= getParentModule()->par("policy");
     tillTotalNumber_= getParentModule()->par("tillsNumber");
     tillCustomers_= new int [tillTotalNumber_];
-    memset(tillCustomers_, 0x00, tillTotalNumber_);
+    memset(tillCustomers_, 0x00, tillTotalNumber_*sizeof(int));
     if(policy_==1)
         this->queue_ = new cQueue("line");//P2 doesn't need any queue in the decider
 

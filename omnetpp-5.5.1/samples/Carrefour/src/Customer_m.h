@@ -19,11 +19,12 @@
 
 
 /**
- * Class generated from <tt>Customer.msg:1</tt> by nedtool.
+ * Class generated from <tt>Customer.msg:16</tt> by nedtool.
  * <pre>
  * message Customer
  * {
  *     double servTime;
+ *     simtime_t arrivalTime;
  * }
  * </pre>
  */
@@ -31,6 +32,7 @@ class Customer : public ::omnetpp::cMessage
 {
   protected:
     double servTime;
+    ::omnetpp::simtime_t arrivalTime;
 
   private:
     void copy(const Customer& other);
@@ -51,6 +53,8 @@ class Customer : public ::omnetpp::cMessage
     // field getter/setter methods
     virtual double getServTime() const;
     virtual void setServTime(double servTime);
+    virtual ::omnetpp::simtime_t getArrivalTime() const;
+    virtual void setArrivalTime(::omnetpp::simtime_t arrivalTime);
 };
 
 inline void doParsimPacking(omnetpp::cCommBuffer *b, const Customer& obj) {obj.parsimPack(b);}

@@ -182,6 +182,7 @@ Register_Class(Customer)
 Customer::Customer(const char *name, short kind) : ::omnetpp::cMessage(name,kind)
 {
     this->servTime = 0;
+    this->arrivalTime = 0;
 }
 
 Customer::Customer(const Customer& other) : ::omnetpp::cMessage(other)
@@ -204,18 +205,21 @@ Customer& Customer::operator=(const Customer& other)
 void Customer::copy(const Customer& other)
 {
     this->servTime = other.servTime;
+    this->arrivalTime = other.arrivalTime;
 }
 
 void Customer::parsimPack(omnetpp::cCommBuffer *b) const
 {
     ::omnetpp::cMessage::parsimPack(b);
     doParsimPacking(b,this->servTime);
+    doParsimPacking(b,this->arrivalTime);
 }
 
 void Customer::parsimUnpack(omnetpp::cCommBuffer *b)
 {
     ::omnetpp::cMessage::parsimUnpack(b);
     doParsimUnpacking(b,this->servTime);
+    doParsimUnpacking(b,this->arrivalTime);
 }
 
 double Customer::getServTime() const
@@ -226,6 +230,16 @@ double Customer::getServTime() const
 void Customer::setServTime(double servTime)
 {
     this->servTime = servTime;
+}
+
+::omnetpp::simtime_t Customer::getArrivalTime() const
+{
+    return this->arrivalTime;
+}
+
+void Customer::setArrivalTime(::omnetpp::simtime_t arrivalTime)
+{
+    this->arrivalTime = arrivalTime;
 }
 
 class CustomerDescriptor : public omnetpp::cClassDescriptor
@@ -293,7 +307,7 @@ const char *CustomerDescriptor::getProperty(const char *propertyname) const
 int CustomerDescriptor::getFieldCount() const
 {
     omnetpp::cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 1+basedesc->getFieldCount() : 1;
+    return basedesc ? 2+basedesc->getFieldCount() : 2;
 }
 
 unsigned int CustomerDescriptor::getFieldTypeFlags(int field) const
@@ -306,8 +320,9 @@ unsigned int CustomerDescriptor::getFieldTypeFlags(int field) const
     }
     static unsigned int fieldTypeFlags[] = {
         FD_ISEDITABLE,
+        FD_ISEDITABLE,
     };
-    return (field>=0 && field<1) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<2) ? fieldTypeFlags[field] : 0;
 }
 
 const char *CustomerDescriptor::getFieldName(int field) const
@@ -320,8 +335,9 @@ const char *CustomerDescriptor::getFieldName(int field) const
     }
     static const char *fieldNames[] = {
         "servTime",
+        "arrivalTime",
     };
-    return (field>=0 && field<1) ? fieldNames[field] : nullptr;
+    return (field>=0 && field<2) ? fieldNames[field] : nullptr;
 }
 
 int CustomerDescriptor::findField(const char *fieldName) const
@@ -329,6 +345,7 @@ int CustomerDescriptor::findField(const char *fieldName) const
     omnetpp::cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount() : 0;
     if (fieldName[0]=='s' && strcmp(fieldName, "servTime")==0) return base+0;
+    if (fieldName[0]=='a' && strcmp(fieldName, "arrivalTime")==0) return base+1;
     return basedesc ? basedesc->findField(fieldName) : -1;
 }
 
@@ -342,8 +359,9 @@ const char *CustomerDescriptor::getFieldTypeString(int field) const
     }
     static const char *fieldTypeStrings[] = {
         "double",
+        "simtime_t",
     };
-    return (field>=0 && field<1) ? fieldTypeStrings[field] : nullptr;
+    return (field>=0 && field<2) ? fieldTypeStrings[field] : nullptr;
 }
 
 const char **CustomerDescriptor::getFieldPropertyNames(int field) const
@@ -411,6 +429,7 @@ std::string CustomerDescriptor::getFieldValueAsString(void *object, int field, i
     Customer *pp = (Customer *)object; (void)pp;
     switch (field) {
         case 0: return double2string(pp->getServTime());
+        case 1: return simtime2string(pp->getArrivalTime());
         default: return "";
     }
 }
@@ -426,6 +445,7 @@ bool CustomerDescriptor::setFieldValueAsString(void *object, int field, int i, c
     Customer *pp = (Customer *)object; (void)pp;
     switch (field) {
         case 0: pp->setServTime(string2double(value)); return true;
+        case 1: pp->setArrivalTime(string2simtime(value)); return true;
         default: return false;
     }
 }

@@ -15,4 +15,5 @@
 
 message Customer {
     double servTime;
+    simtime_t arrivalTime;
 }
