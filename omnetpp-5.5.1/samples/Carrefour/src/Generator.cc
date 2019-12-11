@@ -41,7 +41,7 @@ void Generator::handleMessage(cMessage *msg){
     if(itemsInCartDistribution_ == 0){
         //exponential distribution
         //NOTE: Using RNG #1 to generate the flow of service times
-        cust->setServTime(exponential(meanItemsInACart_, 1));
+        cust->setCartLength(exponential(meanItemsInACart_, 1));
     }else{
         EV << "This type of distribution for items in a cart is not supported yet!";
     }
