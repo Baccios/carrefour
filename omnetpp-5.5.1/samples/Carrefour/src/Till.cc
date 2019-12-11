@@ -60,7 +60,7 @@ void Till::handleBeep(cMessage *msg){
 }
 
 void Till::serveCustomer(Customer *msg) {
-    double procTime = msg->getServTime();//cartLength/capacity;
+    double procTime = msg->getCartLength()/this->capacity_;//cartLength/capacity;
     this->processing_ = msg;
     this->scheduleAt(simTime() + procTime, this->beep_);
 }
