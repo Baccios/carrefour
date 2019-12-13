@@ -36,12 +36,12 @@ void Generator::initialize(){
 
 void Generator::handleMessage(cMessage *msg){
     Customer* cust = new Customer("newCustomer");
-
+    cust->setArrivalTime(simTime());
     //put some items in the cart of the customer
     if(itemsInCartDistribution_ == 0){
         //exponential distribution
         //NOTE: Using RNG #1 to generate the flow of service times
-        cust->setServTime(exponential(meanItemsInACart_, 1));
+        cust->setCartLength(exponential(meanItemsInACart_, 1));
     }else{
         EV << "This type of distribution for items in a cart is not supported yet!";
     }
@@ -60,5 +60,5 @@ void Generator::handleMessage(cMessage *msg){
 }
 
 Generator::~Generator(){
-    delete beep_;
+    cancelAndDelete(beep_);
 }

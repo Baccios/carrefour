@@ -1,0 +1,35 @@
+file 184699 1576104580                                          
+version 2
+run General-9-20191211-23:49:40-6374
+attr configname General
+attr datetime 20191211-23:49:40
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 6374
+attr repetition 9
+attr replication #9
+attr resultdir results
+attr runnumber 9
+attr seedset 9
+param **.tillsNumber 7
+param **.delta 0s
+param **.policy 1
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.decider stats_numCustomers:vector ETV
+attr "" ""
+attr source numCustomers
+vector 1 Carrefour.decider stats_numCustomersQueue:vector ETV
+attr "" ""
+attr source numCustomersQueue
+0	764 92168 721 9155 1205.802918872699 14397.813479446888 3375 0 24 21499 179031
+1	92932 91766 721 9155 1205.802918872699 14397.813479446888 3375 0 17 3477 23965
+

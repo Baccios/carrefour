@@ -1,0 +1,32 @@
+version 2
+run POLICY_1-20-20191213-12:40:09-1218
+attr configname POLICY_1
+attr datetime 20191213-12:40:09
+attr experiment POLICY_1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 1218
+attr repetition 20
+attr replication #20
+attr resultdir results
+attr runnumber 20
+attr seedset 20
+param **.policy 1
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+scalar Carrefour stats_responseTime:mean 48.48758815635
+attr "" ""
+attr source responseTime
+scalar Carrefour stats_waitTime:mean 8.8910294585677
+attr "" ""
+attr source waitTime
+

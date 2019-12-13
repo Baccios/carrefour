@@ -33,6 +33,12 @@ class Decider : public cSimpleModule
     void checkTillsAndPossiblySendCustomer(cMessage *msg = NULL);
     void handleMessageP1(cMessage *msg);
     void handleMessageP2(cMessage *msg);
+
+    //attributes for P1 verification
+    simsignal_t numCustomers_;
+    simsignal_t numCustomersQueue_;
+    simsignal_t waitTime_;
+
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);

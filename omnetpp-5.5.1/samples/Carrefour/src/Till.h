@@ -32,6 +32,9 @@ class Till : public cSimpleModule
     double capacity_;
     void serveCustomer(Customer* msg);
     void serveNextCustomer();
+
+    //attributes for P1 verification
+    simsignal_t responseTime_;
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);

@@ -26,7 +26,10 @@ void Till::initialize()
 
     //Note: the parent network is required to have a parameter named "capacity"
     this->capacity_= getParentModule()->par("capacity");
-}
+
+    //The following code is only for P1 verification
+    responseTime_ = registerSignal("responseTime");
+    }
 
 void Till::handleMessage(cMessage *msg)
 {
@@ -51,6 +54,10 @@ void Till::handleCustomer(Customer *msg) {
 }
 
 void Till::handleBeep(cMessage *msg){
+
+    //P1 verification
+    emit(responseTime_, simTime() - processing_->getArrivalTime());
+
     Departure *dep = new Departure("departure");
     dep->setTillPosition(par("position"));
     //Note: the parent network is required to call the Decider instance "decider"
@@ -60,7 +67,7 @@ void Till::handleBeep(cMessage *msg){
 }
 
 void Till::serveCustomer(Customer *msg) {
-    double procTime = msg->getServTime();//cartLength/capacity;
+    double procTime = msg->getCartLength()/this->capacity_; //cartLength/capacity;
     this->processing_ = msg;
     this->scheduleAt(simTime() + procTime, this->beep_);
 }
@@ -79,9 +86,13 @@ void Till::serveNextCustomer() {
 }
 
 Till::~Till() {
-    delete this->beep_;
+    cancelAndDelete(this->beep_);
     while(!this->queue_->isEmpty()) {
         Customer* tmp = check_and_cast<Customer*>(this->queue_->pop());
         delete tmp;
+    }
+    delete this->queue_;
+    if(processing_) {
+        delete processing_;
     }
 }

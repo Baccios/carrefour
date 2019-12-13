@@ -14,6 +14,6 @@
 // 
 
 message Customer {
-    double servTime;
+    double cartLength;
     simtime_t arrivalTime;
 }

@@ -181,7 +181,7 @@ Register_Class(Customer)
 
 Customer::Customer(const char *name, short kind) : ::omnetpp::cMessage(name,kind)
 {
-    this->servTime = 0;
+    this->cartLength = 0;
     this->arrivalTime = 0;
 }
 
@@ -204,32 +204,32 @@ Customer& Customer::operator=(const Customer& other)
 
 void Customer::copy(const Customer& other)
 {
-    this->servTime = other.servTime;
+    this->cartLength = other.cartLength;
     this->arrivalTime = other.arrivalTime;
 }
 
 void Customer::parsimPack(omnetpp::cCommBuffer *b) const
 {
     ::omnetpp::cMessage::parsimPack(b);
-    doParsimPacking(b,this->servTime);
+    doParsimPacking(b,this->cartLength);
     doParsimPacking(b,this->arrivalTime);
 }
 
 void Customer::parsimUnpack(omnetpp::cCommBuffer *b)
 {
     ::omnetpp::cMessage::parsimUnpack(b);
-    doParsimUnpacking(b,this->servTime);
+    doParsimUnpacking(b,this->cartLength);
     doParsimUnpacking(b,this->arrivalTime);
 }
 
-double Customer::getServTime() const
+double Customer::getCartLength() const
 {
-    return this->servTime;
+    return this->cartLength;
 }
 
-void Customer::setServTime(double servTime)
+void Customer::setCartLength(double cartLength)
 {
-    this->servTime = servTime;
+    this->cartLength = cartLength;
 }
 
 ::omnetpp::simtime_t Customer::getArrivalTime() const
@@ -334,7 +334,7 @@ const char *CustomerDescriptor::getFieldName(int field) const
         field -= basedesc->getFieldCount();
     }
     static const char *fieldNames[] = {
-        "servTime",
+        "cartLength",
         "arrivalTime",
     };
     return (field>=0 && field<2) ? fieldNames[field] : nullptr;
@@ -344,7 +344,7 @@ int CustomerDescriptor::findField(const char *fieldName) const
 {
     omnetpp::cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount() : 0;
-    if (fieldName[0]=='s' && strcmp(fieldName, "servTime")==0) return base+0;
+    if (fieldName[0]=='c' && strcmp(fieldName, "cartLength")==0) return base+0;
     if (fieldName[0]=='a' && strcmp(fieldName, "arrivalTime")==0) return base+1;
     return basedesc ? basedesc->findField(fieldName) : -1;
 }
@@ -428,7 +428,7 @@ std::string CustomerDescriptor::getFieldValueAsString(void *object, int field, i
     }
     Customer *pp = (Customer *)object; (void)pp;
     switch (field) {
-        case 0: return double2string(pp->getServTime());
+        case 0: return double2string(pp->getCartLength());
         case 1: return simtime2string(pp->getArrivalTime());
         default: return "";
     }
@@ -444,7 +444,7 @@ bool CustomerDescriptor::setFieldValueAsString(void *object, int field, int i, c
     }
     Customer *pp = (Customer *)object; (void)pp;
     switch (field) {
-        case 0: pp->setServTime(string2double(value)); return true;
+        case 0: pp->setCartLength(string2double(value)); return true;
         case 1: pp->setArrivalTime(string2simtime(value)); return true;
         default: return false;
     }

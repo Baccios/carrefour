@@ -23,7 +23,7 @@
  * <pre>
  * message Customer
  * {
- *     double servTime;
+ *     double cartLength;
  *     simtime_t arrivalTime;
  * }
  * </pre>
@@ -31,7 +31,7 @@
 class Customer : public ::omnetpp::cMessage
 {
   protected:
-    double servTime;
+    double cartLength;
     ::omnetpp::simtime_t arrivalTime;
 
   private:
@@ -51,8 +51,8 @@ class Customer : public ::omnetpp::cMessage
     virtual void parsimUnpack(omnetpp::cCommBuffer *b) override;
 
     // field getter/setter methods
-    virtual double getServTime() const;
-    virtual void setServTime(double servTime);
+    virtual double getCartLength() const;
+    virtual void setCartLength(double cartLength);
     virtual ::omnetpp::simtime_t getArrivalTime() const;
     virtual void setArrivalTime(::omnetpp::simtime_t arrivalTime);
 };
