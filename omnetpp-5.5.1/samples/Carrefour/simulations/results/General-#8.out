@@ -1,8 +1,0 @@
-** Event #0   t=0   Elapsed: 3.5e-05s (0m 00s)  0% completed  (60% total)
-     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
-     Messages:  created: 8   present: 8   in FES: 2
-** Event #9269   t=14400   Elapsed: 0.013605s (0m 00s)  100% completed  (80% total)
-     Speed:     ev/sec=682749   simsec/sec=1.06005e+06   ev/simsec=0.64407
-     Messages:  created: 3715   present: 9   in FES: 2
-
-<!> Simulation time limit reached -- at t=14400s, event #9269
