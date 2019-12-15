@@ -1,14 +1,14 @@
 version 2
-run POLICY_1-0-20191213-12:40:09-1214
+run POLICY_1-0-20191215-14:11:04-2674
 attr configname POLICY_1
-attr datetime 20191213-12:40:09
+attr datetime 20191215-14:11:04
 attr experiment POLICY_1
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Carrefour
-attr processid 1214
+attr processid 2674
 attr repetition 0
 attr replication #0
 attr resultdir results
