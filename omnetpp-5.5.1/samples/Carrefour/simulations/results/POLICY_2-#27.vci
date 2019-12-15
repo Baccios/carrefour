@@ -1,0 +1,55 @@
+file 69703 1576432517                                           
+version 2
+run POLICY_2-27-20191215-18:55:17-5665
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5665
+attr repetition 27
+attr replication #27
+attr resultdir results
+attr runnumber 27
+attr seedset 27
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 11555 725 9062 1215.18645604713 14387.882042390453 282 0.377793559909 381.18820879724 13234.820591761 1158726.8862283
+1	12789 11061 728 9065 1219.653951384476 14390.620790327913 270 0.158063418014 269.63253862426 13202.334260614 1130493.6543198
+2	23850 12666 735 9057 1237.724664930724 14383.039485383882 309 0.555799297128 183.1812455938 13246.731727576 934767.03459957
+3	36516 9047 740 9030 1246.63102887239 14336.806498488795 221 0.588213190745 280.17187743762 13143.804817927 1378269.1711011
+4	45563 7642 743 9070 1247.572298793708 14393.734554179985 187 1.033421958055 385.62542902953 13197.075862817 1721509.1917696
+5	53205 5526 746 9014 1249.130736007444 14322.321796442468 135 2.422472244815 604.08567047216 13302.795171156 2522801.8672652
+6	58731 10971 783 9038 1314.988180176243 14353.558172088005 268 1.442786694037 220.05593396989 13177.630534367 1048554.2896269
+

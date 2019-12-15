@@ -1,0 +1,55 @@
+file 67986 1576432517                                           
+version 2
+run POLICY_2-25-20191215-18:55:17-5665
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5665
+attr repetition 25
+attr replication #25
+attr resultdir results
+attr runnumber 25
+attr seedset 25
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 10477 706 8832 1220.410108218145 14371.505534687564 256 0.263175939142 285.59276414692 13194.018621841 1253000.3416776
+1	11711 11975 715 8843 1233.422110694181 14386.529309596542 293 0.46246989757 198.24194658057 13207.300376695 990368.10692226
+2	23686 9766 718 8856 1235.48152363945 14398.956046750741 239 1.791373754657 224.55277914499 13217.404200627 1146469.962919
+3	33452 7591 723 8838 1242.94900292312 14386.144390584993 185 3.005933041178 268.7328250294 13192.961999908 1527572.2011563
+4	41043 12808 744 8849 1273.063374565605 14390.463083525821 313 1.559904697652 221.97646842001 13196.708461634 998880.5904835
+5	53851 8314 790 8780 1355.755165222743 14280.193316953683 203 1.528095842116 304.09250883966 13096.192488171 1351126.1441359
+6	62165 5820 796 8846 1357.803898544966 14389.094410201156 142 0.747657525771 682.54367130192 13345.76461381 2532047.7369012
+

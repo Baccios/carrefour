@@ -1,0 +1,55 @@
+file 67707 1576432517                                           
+version 2
+run POLICY_2-11-20191215-18:55:17-5662
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5662
+attr repetition 11
+attr replication #11
+attr resultdir results
+attr runnumber 11
+attr seedset 11
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 8874 716 8751 1214.629692290581 14273.251532033021 216 0.37523180358 230.95935133995 13110.20268025 1348086.3423945
+1	10108 7498 724 8754 1228.702406266079 14275.364991914322 183 0.296061207213 390.73307925857 13203.724231786 1731532.9856944
+2	17606 10791 727 8831 1229.672225191182 14391.317630374879 264 0.592205239984 286.29699193499 13203.782643131 1295268.9042733
+3	28397 12784 736 8834 1238.614977424792 14395.524703609291 312 0.651425204699 191.1028976577 13241.52650661 950227.12695452
+4	41181 10383 753 8824 1267.431482995159 14383.141584218763 254 0.009311051846 224.78326098996 13243.079191992 1205974.5326538
+5	51564 9910 765 8748 1297.447616823305 14271.099468060296 242 1.12335077769 305.69839164575 13146.678074472 1277260.9154178
+6	61474 6232 781 8653 1303.602221223663 14154.122834608901 152 1.43877258961 411.92638937078 12962.240855788 2144802.6732695
+

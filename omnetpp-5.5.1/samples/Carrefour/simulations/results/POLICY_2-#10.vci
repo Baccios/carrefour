@@ -1,0 +1,55 @@
+file 64529 1576432517                                           
+version 2
+run POLICY_2-10-20191215-18:55:17-5662
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5662
+attr repetition 10
+attr replication #10
+attr resultdir results
+attr runnumber 10
+attr seedset 10
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 8306 730 8416 1203.206142605877 14342.938664020246 203 1.85545983345 337.34654484116 13211.805488735 1462656.745782
+1	9540 8850 735 8430 1213.282623560505 14382.470552538306 216 4.019010693268 368.14080787228 13196.132577309 1348767.4374076
+2	18390 7265 743 8396 1217.517952093015 14308.320720923305 177 0.797203317647 356.43060878772 13218.399408669 1865970.3161992
+3	25655 11887 757 8440 1254.346457705474 14399.041839463641 290 0.818225742388 252.1091967208 13230.845529974 1024440.1405391
+4	37542 11004 760 8410 1260.341448907304 14336.721722491623 269 0.139636649731 203.45002764637 13221.236114609 1105230.9612463
+5	48546 9982 805 8350 1316.086074758564 14232.041503303302 244 0.17469053637 248.87263795969 13046.096481475 1197755.1798496
+6	58528 6000 821 8404 1341.872604814716 14316.167205434196 146 0.665122028076 465.38406961664 13244.717661526 2549137.3194078
+

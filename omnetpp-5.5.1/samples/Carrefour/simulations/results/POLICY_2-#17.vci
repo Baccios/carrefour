@@ -1,0 +1,55 @@
+file 67185 1576432517                                           
+version 2
+run POLICY_2-17-20191215-18:55:17-5663
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5663
+attr repetition 17
+attr replication #17
+attr resultdir results
+attr runnumber 17
+attr seedset 17
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 8798 713 8715 1205.235761409384 14328.261023093984 215 0.176879336384 283.72798693819 13301.809480193 1457379.1962024
+1	10032 11176 718 8732 1231.677754864136 14338.776117653027 273 0.030461955268 211.69023787855 13143.223563164 1045577.2788347
+2	21208 7206 726 8743 1254.525430935475 14356.875796665633 176 1.385053656236 471.49643041256 13314.568659442 2043516.0724331
+3	28414 12834 739 8749 1306.587933012969 14366.26023754399 314 0.202860196564 217.82913398181 13240.147321103 1031830.1031015
+4	41248 10103 747 8765 1308.947740074393 14388.843126639713 247 0.0384810727 402.2418764746 13213.605078519 1222679.4764266
+5	51351 9594 782 8762 1375.169924727064 14385.803581300834 234 0.572883077853 551.99182031334 13189.487540011 1610580.1684119
+6	60945 6239 986 8746 1783.728682086182 14361.164600687591 152 0.709103835718 661.65980159206 13239.095720193 2273520.0605016
+

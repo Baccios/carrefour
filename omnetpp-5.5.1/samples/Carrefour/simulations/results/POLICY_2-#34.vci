@@ -1,0 +1,55 @@
+file 69204 1576432517                                           
+version 2
+run POLICY_2-34-20191215-18:55:17-5666
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5666
+attr repetition 34
+attr replication #34
+attr resultdir results
+attr runnumber 34
+attr seedset 34
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 11815 699 8903 1216.338060572012 14251.804688122163 289 0.491579848347 224.05573823642 13198.335114662 1001605.5419843
+1	13049 11004 702 8965 1226.592454517673 14369.077446744288 269 0.044759900092 228.73259380547 13223.389767251 1034724.8966939
+2	24053 10024 705 8962 1229.914141480743 14368.748439924669 244 0.578444091468 219.82792196157 13220.408841122 1163614.6201871
+3	34077 6968 708 8986 1242.196638097337 14396.647568378892 170 1.76950782056 506.82472552793 13247.569647128 1979801.2750458
+4	41045 6191 711 8897 1251.927536493585 14250.710728069917 151 1.349514073956 554.10812552848 13239.155693064 2325764.4832034
+5	47236 12761 719 8926 1256.911659931826 14296.170437079158 312 0.052496395573 207.42823648075 13100.539840864 903330.83246185
+6	59997 9206 790 8972 1364.292725260379 14382.160664220108 225 0.205768030237 290.47722685134 13233.799501209 1396552.8980258
+

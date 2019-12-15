@@ -1,0 +1,55 @@
+file 68145 1576432517                                           
+version 2
+run POLICY_2-22-20191215-18:55:17-5664
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5664
+attr repetition 22
+attr replication #22
+attr resultdir results
+attr runnumber 22
+attr seedset 22
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 6067 732 8874 1202.230810745499 14342.456513092 148 2.883898538545 562.56745518908 13151.53281685 2655268.0375094
+1	7301 9487 739 8884 1217.044308695298 14373.442463066937 232 0.039167543558 369.29657184633 13207.73367422 1290003.7157664
+2	16788 12198 742 8897 1224.257055373145 14398.709175580079 298 0.321369258802 280.99511514838 13204.829159601 1141775.4134393
+3	28986 7660 747 8862 1233.392045567073 14333.710926770621 187 0.470680043459 249.3632470341 13144.844715345 1480520.3224438
+4	36646 10486 750 8855 1242.527880798712 14321.682386683293 256 0.951101310915 237.3897670846 13194.919578896 1160736.0845932
+5	47132 12131 776 8894 1293.995273220229 14394.088276938296 296 0.45774536676 194.54583875509 13198.502949585 955117.25846667
+6	59263 8881 843 8826 1371.452175524925 14283.096393654569 217 1.256513285067 363.60448415456 13112.005928564 1385112.8988217
+

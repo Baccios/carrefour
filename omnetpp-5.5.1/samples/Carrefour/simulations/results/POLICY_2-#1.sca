@@ -1,0 +1,110 @@
+version 2
+run POLICY_2-1-20191215-18:59:17-5756
+attr configname POLICY_2
+attr datetime 20191215-18:59:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5756
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+scalar Carrefour.tills[0] stats_numCustomersQueue:timeavg 0.65431659960257
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[0] stats_numCustomers:timeavg 1.5689490475231
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[0] stats_responseTime:mean 72.009328027198
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[0] stats_waitTime:mean 29.854953876312
+attr "" ""
+attr source waitTime
+scalar Carrefour.tills[1] stats_numCustomersQueue:timeavg 0.50801409409259
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[1] stats_numCustomers:timeavg 1.3854675815128
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[1] stats_responseTime:mean 60.829385802293
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[1] stats_waitTime:mean 22.26122369866
+attr "" ""
+attr source waitTime
+scalar Carrefour.tills[2] stats_numCustomersQueue:timeavg 0.40184646461985
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[2] stats_numCustomers:timeavg 1.2272198192175
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[2] stats_responseTime:mean 56.985112161921
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[2] stats_waitTime:mean 18.665806558332
+attr "" ""
+attr source waitTime
+scalar Carrefour.tills[3] stats_numCustomersQueue:timeavg 0.34973937244227
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[3] stats_numCustomers:timeavg 1.1334781524146
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[3] stats_responseTime:mean 60.663823931295
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[3] stats_waitTime:mean 18.718073803614
+attr "" ""
+attr source waitTime
+scalar Carrefour.tills[4] stats_numCustomersQueue:timeavg 0.3040089844361
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[4] stats_numCustomers:timeavg 1.0147068160783
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[4] stats_responseTime:mean 62.491567343693
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[4] stats_waitTime:mean 18.72264739228
+attr "" ""
+attr source waitTime
+scalar Carrefour.tills[5] stats_numCustomersQueue:timeavg 0.22444887834464
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[5] stats_numCustomers:timeavg 0.87853532246584
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[5] stats_responseTime:mean 53.86731189181
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[5] stats_waitTime:mean 13.822653569441
+attr "" ""
+attr source waitTime
+scalar Carrefour.tills[6] stats_numCustomersQueue:timeavg 0.17366733177741
+attr "" ""
+attr source numCustomersQueue
+scalar Carrefour.tills[6] stats_numCustomers:timeavg 0.73468093291537
+attr "" ""
+attr source numCustomers
+scalar Carrefour.tills[6] stats_responseTime:mean 53.848080117456
+attr "" ""
+attr source responseTime
+scalar Carrefour.tills[6] stats_waitTime:mean 12.668179662837
+attr "" ""
+attr source waitTime
+

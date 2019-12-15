@@ -1,0 +1,55 @@
+file 68748 1576432517                                           
+version 2
+run POLICY_2-0-20191215-18:55:17-5660
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5660
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1229 13277 726 8958 1228.211826146261 14380.721916987522 324 0.662898183348 228.89598715317 13210.207441041 1017683.474096
+1	14506 10269 729 8932 1228.670441557651 14344.268317618142 251 0.376794168444 335.6779931825 13256.66014481 1251351.9982967
+2	24775 12159 734 8914 1236.098269532862 14324.153697044575 297 0.910885258447 290.28630585814 13183.631472775 1023190.3136388
+3	36934 9587 737 8935 1240.89784462599 14345.780145751886 234 0.240662364281 216.61664854316 13147.663737882 1208886.2246236
+4	46521 8838 740 8951 1251.651806803209 14364.595377272822 216 2.172446333455 329.33056307659 13252.661859982 1477656.4198178
+5	55359 7031 743 8943 1251.813327828378 14354.256786633413 172 1.261376422633 308.076505419 13161.84104751 1718170.7156832
+6	62390 6357 746 8946 1252.133138220844 14359.772890008786 155 3.896985492251 453.62802807384 13330.922447459 2149021.366971
+

@@ -1,0 +1,55 @@
+file 70303 1576432517                                           
+version 2
+run POLICY_2-9-20191215-18:55:17-5661
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5661
+attr repetition 9
+attr replication #9
+attr resultdir results
+attr runnumber 9
+attr seedset 9
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1229 11774 722 9121 1207.420733653239 14341.487879547287 288 0.245895489795 255.32493353509 13152.999763842 1100413.7470282
+1	13003 12378 725 9085 1209.390857002047 14304.435343967902 302 0.973912215985 253.65204886961 13135.693119278 939534.73202368
+2	25381 11420 737 9156 1222.438053433722 14397.813479446888 279 0.815502334383 189.78908251248 13215.366047852 1051574.7730149
+3	36801 10254 747 9143 1234.775745019518 14377.433857423588 250 0.891526540738 259.99156137738 13346.735162189 1208093.7459486
+4	47055 8930 750 9046 1235.941814287211 14269.781276065852 218 0.057414686764 240.42386494522 13100.915293403 1273381.1141208
+5	55985 7635 753 9107 1241.520258702542 14327.042361545075 187 1.101436676351 494.25865865818 13209.613853513 1845878.6378112
+6	63620 6682 756 9124 1245.118640517033 14342.194375758963 163 2.717957414215 658.48734895453 13164.706019992 2174559.1792435
+

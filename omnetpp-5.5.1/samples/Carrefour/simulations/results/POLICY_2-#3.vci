@@ -1,0 +1,55 @@
+file 69313 1576432517                                           
+version 2
+run POLICY_2-3-20191215-18:55:17-5660
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5660
+attr repetition 3
+attr replication #3
+attr resultdir results
+attr runnumber 3
+attr seedset 3
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1229 11778 677 8972 1203.043089049149 14363.58224713939 288 0.259797211435 215.98523983884 13298.468842402 997625.30450347
+1	13007 10285 682 8961 1217.029622314118 14352.034970553268 251 0.432366972082 213.59257671131 13181.630635396 1096328.2654266
+2	23292 8355 685 8964 1223.450726876627 14352.704938230724 204 0.45052808793 331.93719222192 13240.165022183 1421734.7959093
+3	31647 8446 688 8969 1232.647357144307 14362.499239801865 206 0.526295701365 365.93269068504 13242.252044671 1497626.5119471
+4	40093 7096 691 8932 1239.033221678943 14321.28018901496 173 0.646924821239 356.88722869327 13191.557023324 1759592.2047171
+5	47189 11551 694 8935 1240.233031928064 14321.491234130963 282 0.537809481521 277.61884444307 13189.451790871 1124300.8253964
+6	58740 10572 705 8945 1258.823508653299 14330.191556032619 258 0.563120448905 203.2578312752 13170.621980469 1094951.5647464
+

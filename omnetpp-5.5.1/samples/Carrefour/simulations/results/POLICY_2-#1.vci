@@ -1,0 +1,55 @@
+file 71962 1576432517                                           
+version 2
+run POLICY_2-1-20191215-18:55:17-5660
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5660
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1229 11642 747 9351 1208.993281689709 14373.267121204151 284 0.32212488515 188.91667843403 13216.579529535 1063125.9205846
+1	12871 11828 756 9359 1219.670401396647 14379.444734603015 289 0.731478316418 294.2461261944 13308.3049829 1154578.3282553
+2	24699 12341 759 9374 1219.714880183709 14399.219880328114 301 1.846358344151 278.01083197805 13225.386582707 1080744.970767
+3	37040 10093 770 9356 1234.064110271165 14374.604662403989 246 0.426313032214 237.80210442685 13227.49706752 1184122.057913
+4	47133 8728 805 9281 1282.216978051608 14293.053360282285 213 0.346844868187 246.31459077408 13104.948927465 1324949.1045048
+5	55861 8727 808 9284 1282.424042369159 14295.616297156444 213 0.497621554887 325.93315739948 13129.702807082 1475986.119857
+6	64588 7373 811 9342 1286.036021230345 14356.98275578998 180 0.801109382929 332.24710498541 13187.155579918 1742032.1714603
+

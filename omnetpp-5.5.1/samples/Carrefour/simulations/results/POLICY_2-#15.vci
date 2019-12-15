@@ -1,0 +1,55 @@
+file 68602 1576432517                                           
+version 2
+run POLICY_2-15-20191215-18:55:17-5663
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5663
+attr repetition 15
+attr replication #15
+attr resultdir results
+attr runnumber 15
+attr seedset 15
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 11686 761 8959 1203.451216900938 14349.419182097464 286 0.124613966369 245.00447084286 13181.409930754 1123127.7510384
+1	12920 6107 764 8976 1203.921870865575 14377.133830908828 149 2.600955603895 365.22346397396 13208.022006587 2100897.4676211
+2	19027 10160 785 8965 1215.410768660219 14361.963613210522 248 2.162084593356 248.51124372766 13193.102243918 1163835.360695
+3	29187 9015 788 8970 1218.944856895875 14369.071081854912 220 2.184857433937 232.73868044807 13175.427045053 1256161.4504214
+4	38202 11959 800 8985 1254.411288784242 14399.356248672803 292 0.299569138993 353.64440360231 13228.27918481 1077573.980131
+5	50161 11145 820 8962 1298.322548990473 14353.492825169545 272 0.699184685974 226.55380738988 13160.02026012 1031394.8578734
+6	61306 7295 868 8973 1407.846240406437 14372.859371613387 178 2.232333037208 320.32642278281 13176.840608079 1639290.2992907
+

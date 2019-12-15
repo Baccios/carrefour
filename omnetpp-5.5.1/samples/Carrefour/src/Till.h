@@ -29,12 +29,16 @@ class Till : public cSimpleModule
     cQueue* queue_;
     Customer* processing_;
     cMessage* beep_;
+    int position_;
     double capacity_;
     void serveCustomer(Customer* msg);
     void serveNextCustomer();
 
-    //attributes for P1 verification
+    //attributes for P2 verification
     simsignal_t responseTime_;
+    simsignal_t numCustomers_;
+    simsignal_t numCustomersQueue_;
+    simsignal_t waitTime_;
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);

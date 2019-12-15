@@ -1,0 +1,55 @@
+file 66963 1576432517                                           
+version 2
+run POLICY_2-31-20191215-18:55:17-5666
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5666
+attr repetition 31
+attr replication #31
+attr resultdir results
+attr runnumber 31
+attr seedset 31
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 6227 782 8822 1225.825305994935 14397.9637896019 152 0.827022815713 559.64988841066 13338.611819504 2374802.9015741
+1	7461 10985 787 8802 1232.47513052916 14374.458240949452 269 0.854929316805 313.9217318469 13176.910019368 1228851.6632634
+2	18446 11476 825 8784 1300.071185935878 14350.763537105446 280 1.01960167614 320.10048864246 13224.307825649 1150316.9978138
+3	29922 7418 852 8791 1332.305600388343 14357.36011021961 181 1.096276361377 350.36162179476 13165.120297387 1691069.0198377
+4	37340 10812 863 8810 1340.717030459769 14379.70942222187 264 0.163030261739 237.3135366942 13272.472848231 1171409.1830523
+5	48152 9596 866 8819 1343.839503169053 14396.314294861203 234 0.43694537142 322.90823627203 13226.653802864 1287849.3146224
+6	57748 9214 871 8775 1346.559248367726 14347.475125947555 225 0.870417295246 319.69460802836 13151.252014273 1342981.6827683
+

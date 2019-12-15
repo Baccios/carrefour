@@ -1,0 +1,55 @@
+file 68372 1576432517                                           
+version 2
+run POLICY_2-4-20191215-18:55:17-5660
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5660
+attr repetition 4
+attr replication #4
+attr resultdir results
+attr runnumber 4
+attr seedset 4
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1229 11823 807 8974 1204.241555167361 14344.252962680878 289 0.386274370389 258.50289118812 13207.01132359 1081223.4362184
+1	13052 11456 810 8977 1206.060874141865 14349.752348076788 280 0.009433227953 261.80001980763 13185.950334972 1065925.1220831
+2	24508 8738 815 8980 1211.158606670095 14356.827377417887 213 1.252399661946 223.12234992625 13226.470631466 1288536.6296569
+3	33246 12081 825 8985 1219.045768617674 14372.45474793234 295 0.184319371678 210.2915476294 13189.468005842 975702.17736261
+4	45327 10205 847 8995 1245.353316689804 14383.930336102058 249 0.682917033023 270.29733499721 13217.038555827 1150186.2920914
+5	55532 7473 868 8988 1286.354023311371 14373.527057699527 182 0.057859997275 406.50608436247 13242.905449392 1677533.9721266
+6	63005 5366 871 8899 1293.767979250925 14179.560371366042 131 1.275032199447 387.37198585893 13043.222452244 2261840.6296352
+

@@ -1,0 +1,55 @@
+file 68362 1576432517                                           
+version 2
+run POLICY_2-14-20191215-18:55:17-5662
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5662
+attr repetition 14
+attr replication #14
+attr resultdir results
+attr runnumber 14
+attr seedset 14
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 12027 645 8807 1201.685111443792 14345.329343322298 294 0.311408950665 260.7371643577 13172.233976046 1080640.9657552
+1	13261 11624 648 8802 1204.36589471349 14338.743313706405 284 0.503482815487 198.94330062859 13177.881517569 988173.98627388
+2	24885 11178 653 8825 1215.716720130742 14377.796530414038 273 0.42101388668 239.77672745053 13294.422884964 1141598.9810937
+3	36063 9916 663 8830 1231.951874150507 14378.428401353236 242 0.924841238531 292.45250194374 13316.424156835 1253329.2146782
+4	45979 8968 673 8833 1263.488654910784 14383.816135603483 219 1.49839418386 338.27624403822 13321.471559995 1401150.569502
+5	54947 6579 733 8836 1363.25467801074 14385.085574366283 161 0.380583566653 477.03930327241 13201.132088247 2007385.7537366
+6	61526 6835 746 8791 1371.338502203335 14313.18662012797 167 0.653776965741 491.83524930624 13149.748773997 2100903.1030206
+

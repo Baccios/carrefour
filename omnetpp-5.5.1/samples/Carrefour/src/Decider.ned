@@ -17,11 +17,6 @@ package carrefour;
 
 simple Decider
 {
-   	parameters:
-   	    @signal[numCustomers] (type=long);
-        @statistic[stats_numCustomers] (source="numCustomers"; record=vector;);
-        @signal[numCustomersQueue] (type=long);
-        @statistic[stats_numCustomersQueue] (source="numCustomersQueue"; record=vector;);
     gates:
         input customer_in;
         input ack_in @directIn;

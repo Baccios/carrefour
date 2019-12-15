@@ -32,12 +32,6 @@ network Carrefour
         //1: lognormal distribution of the number of items in a cart
         int itemsInCartDistribution;
         
-        //for P1 verification
-        @signal[waitTime] (type=simtime_t);
-        @statistic[stats_waitTime] (source="waitTime"; record=mean;);
-        @signal[responseTime] (type=simtime_t);
-        @statistic[stats_responseTime] (source="responseTime"; record=mean;);
-        
     submodules:
         generator: Generator;
         decider: Decider;

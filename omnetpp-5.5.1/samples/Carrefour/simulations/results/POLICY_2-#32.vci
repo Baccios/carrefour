@@ -1,0 +1,55 @@
+file 69826 1576432517                                           
+version 2
+run POLICY_2-32-20191215-18:55:17-5666
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5666
+attr repetition 32
+attr replication #32
+attr resultdir results
+attr runnumber 32
+attr seedset 32
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 12693 781 9148 1239.329676577509 14394.317215055397 310 0.824768185089 211.85373162725 13201.251968589 974209.57989635
+1	13927 11630 784 9120 1265.245884860771 14301.688316761965 284 0.2781885993 282.05125330372 13135.672980788 1027258.8195817
+2	25557 9015 787 9095 1271.304962070167 14272.808975478975 220 1.239641031301 260.00781188925 13079.370333532 1317780.0464852
+3	34572 8662 790 9098 1271.435331794289 14275.436606583712 211 0.398206039483 321.7898576019 13127.839562117 1498942.6932894
+4	43234 7628 793 9106 1272.564141032418 14283.733593334434 186 0.446817086396 372.77942171892 13188.997094616 1751750.1974615
+5	50862 12289 798 9132 1279.964810680052 14360.976669409281 300 0.475593088346 198.1267224787 13197.651425998 965304.11574542
+6	63151 6674 951 9076 1591.403801707271 14255.244231578349 163 0.071092096642 481.64189565071 13106.73699154 2465967.5902875
+

@@ -1,0 +1,55 @@
+file 69553 1576432517                                           
+version 2
+run POLICY_2-20-20191215-18:55:17-5664
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5664
+attr repetition 20
+attr replication #20
+attr resultdir results
+attr runnumber 20
+attr seedset 20
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 12418 784 9104 1202.890796581683 14388.80092326847 304 0.078075879737 233.21936559011 13251.115037985 1013204.6898686
+1	13652 11914 787 9107 1203.442582408274 14394.122896027664 291 0.456400496873 267.61252124677 13205.709677429 1111096.1441628
+2	25566 10845 790 9110 1204.590979185865 14394.505678262531 265 0.630194882 201.61557845202 13204.327647499 1065835.9497544
+3	36411 9806 810 9098 1258.70288005235 14373.518996401039 239 1.86295329633 249.60322089117 13211.696728973 1165382.8335198
+4	46217 9032 813 9085 1259.89389979483 14345.725165292358 220 1.543231591595 267.41965163407 13175.353026353 1317226.304775
+5	55249 7729 816 9088 1264.760081233086 14346.516790857696 188 0.531204102349 404.35406852736 13156.241514303 1737096.3218737
+6	62978 6574 856 9101 1320.030292158145 14384.562708127085 160 2.316816690738 539.24106751613 13192.627182592 2196183.4996704
+

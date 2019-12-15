@@ -1,0 +1,55 @@
+file 69464 1576432517                                           
+version 2
+run POLICY_2-24-20191215-18:55:17-5664
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5664
+attr repetition 24
+attr replication #24
+attr resultdir results
+attr runnumber 24
+attr seedset 24
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1234 7868 785 9109 1200.802600931165 14383.936521776266 192 2.116382586285 390.42456080197 13206.920822525 1669843.8881406
+1	9102 7052 788 9085 1211.71471690576 14339.404919594286 172 0.028093437794 503.58899360601 13174.945348707 2071322.6648698
+2	16154 8355 791 9076 1212.092230811627 14326.425583825667 204 3.054307832006 283.70592131285 13188.362255082 1333490.5941812
+3	24509 9538 796 9091 1215.540592445719 14356.004069257226 233 0.554101738777 228.30970599512 13218.555366634 1200419.9515781
+4	34047 11052 812 9088 1234.993836834404 14347.82361072586 270 1.408810015004 217.16506463077 13242.421063986 1107067.6223753
+5	45099 12013 834 9112 1250.234230723879 14387.943095437974 293 0.43207609139 264.61114174866 13227.280009342 1049185.2200566
+6	57112 12351 858 9064 1287.356912877053 14306.024663860134 302 0.603922654392 272.89405758903 13114.787040731 1092231.9953949
+

@@ -27,11 +27,6 @@ void Decider::initialize()
     memset(tillCustomers_, 0x00, tillTotalNumber_*sizeof(int));
     if(policy_==1)
         this->queue_ = new cQueue("line");//P2 doesn't need any queue in the decider
-
-    //The following code is only for P1 verification
-    numCustomers_ = registerSignal("numCustomers");
-    numCustomersQueue_ = registerSignal("numCustomersQueue");
-    waitTime_ = registerSignal("waitTime");
 }
 
 void Decider::handleMessage(cMessage *msg)
@@ -66,15 +61,6 @@ void Decider::handleMessageP1(cMessage *msg){
             checkTillsAndPossiblySendCustomer(); //surely we'll send a msg because at least the till that has sent the ack is free (1^)
         delete dep;
     }
-
-    //the following code is only for P1 verification
-    int N = queue_->getLength();
-    int Nq = N;
-    for(int i = 0; i<tillTotalNumber_; ++i) {
-        N+=tillCustomers_[i];
-    }
-    emit(numCustomers_, N);
-    emit(numCustomersQueue_, Nq);
 }
 
 void Decider::checkTillsAndPossiblySendCustomer(cMessage *msg){
@@ -92,8 +78,6 @@ void Decider::checkTillsAndPossiblySendCustomer(cMessage *msg){
         queue_->insert(msg); //never insert again the msg that I have extracted (explained into 1^)
     else{
         tillCustomers_[destTill]++;
-        //P1 verification
-        emit(waitTime_, simTime() - msg->getArrivalTime());
         //Delta*j will be considered as part of the service time because the till is already busy during the traversing of the customer
         send(msg, "out",destTill);
     }

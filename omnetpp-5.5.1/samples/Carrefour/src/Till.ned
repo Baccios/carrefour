@@ -19,6 +19,15 @@ simple Till
 {
     parameters:
         int position;
+        //for P2 verification
+        @signal[waitTime] (type=simtime_t);
+        @statistic[stats_waitTime] (source="waitTime"; record=mean;);
+        @signal[responseTime] (type=simtime_t);
+        @statistic[stats_responseTime] (source="responseTime"; record=mean;);
+        @signal[numCustomers] (type=long);
+        @statistic[stats_numCustomers] (source="numCustomers"; record=timeavg;);
+        @signal[numCustomersQueue] (type=long);
+        @statistic[stats_numCustomersQueue] (source="numCustomersQueue"; record=timeavg;);
     gates:
         input in;
 }

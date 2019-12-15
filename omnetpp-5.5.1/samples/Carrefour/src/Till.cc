@@ -24,11 +24,15 @@ void Till::initialize()
     this->queue_ = new cQueue("line");
     this->processing_ = NULL;
 
-    //Note: the parent network is required to have a parameter named "capacity"
+    //Note: the parent network is required to have a parameter named "capacity" and one named "position"
     this->capacity_= getParentModule()->par("capacity");
+    this->position_ = par("position");
 
-    //The following code is only for P1 verification
+    //The following code is only for P2 verification
     responseTime_ = registerSignal("responseTime");
+    numCustomers_ = registerSignal("numCustomers");
+    numCustomersQueue_ = registerSignal("numCustomersQueue");
+    waitTime_ = registerSignal("waitTime");
     }
 
 void Till::handleMessage(cMessage *msg)
@@ -39,6 +43,16 @@ void Till::handleMessage(cMessage *msg)
         handleCustomer(check_and_cast<Customer*>(msg));
     }
     //nothing else to do: these are the only two cases of message
+
+    //the following code is only for P2 verification
+       int N = queue_->getLength();
+       int Nq = N;
+       if(processing_ != NULL)
+           N++;
+       //if(position_ == 1) {
+           emit(numCustomers_, N);
+           emit(numCustomersQueue_, Nq);
+       //}
 }
 
 void Till::handleCustomer(Customer *msg) {
@@ -55,11 +69,12 @@ void Till::handleCustomer(Customer *msg) {
 
 void Till::handleBeep(cMessage *msg){
 
-    //P1 verification
-    emit(responseTime_, simTime() - processing_->getArrivalTime());
+    //P2 verification
+    //if(position_ == 1) //only the second till records
+        emit(responseTime_, simTime() - processing_->getArrivalTime());
 
     Departure *dep = new Departure("departure");
-    dep->setTillPosition(par("position"));
+    dep->setTillPosition(position_);
     //Note: the parent network is required to call the Decider instance "decider"
     cModule *targetModule = getParentModule()->getSubmodule("decider");
     this->sendDirect(dep, targetModule, "ack_in");
@@ -67,6 +82,9 @@ void Till::handleBeep(cMessage *msg){
 }
 
 void Till::serveCustomer(Customer *msg) {
+    //P2 verification
+    //if(position_ == 1) //only the second till records
+        emit(waitTime_, simTime() - msg->getArrivalTime());
     double procTime = msg->getCartLength()/this->capacity_;//cartLength/capacity;
     this->processing_ = msg;
     this->scheduleAt(simTime() + procTime, this->beep_);

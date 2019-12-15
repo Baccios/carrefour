@@ -1,0 +1,55 @@
+file 69682 1576432517                                           
+version 2
+run POLICY_2-5-20191215-18:55:17-5661
+attr configname POLICY_2
+attr datetime 20191215-18:55:17
+attr experiment POLICY_2
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Carrefour
+attr processid 5661
+attr repetition 5
+attr replication #5
+attr resultdir results
+attr runnumber 5
+attr seedset 5
+param **.policy 2
+param **.delta 0s
+param **.tillsNumber 7
+param **.capacity 0.3
+param **.meanInterArrivalTime 8s
+param **.meanItemsInACart 12
+param **.interArrivalDistribution 0
+param **.itemsInCartDistribution 0
+
+vector 0 Carrefour.tills[0] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 1 Carrefour.tills[4] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 2 Carrefour.tills[1] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 3 Carrefour.tills[3] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 4 Carrefour.tills[2] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 5 Carrefour.tills[5] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+vector 6 Carrefour.tills[6] stats_interArrival:vector ETV
+attr "" ""
+attr source interArrival
+0	1229 12533 910 9260 1225.882418696305 14366.263808517262 306 0.708915414378 205.9724443289 13171.218649647 976552.88899338
+1	13762 8916 921 9255 1241.991148327911 14361.754481308044 217 1.71766805007 290.26705430606 13171.169417375 1318422.3230937
+2	22678 11052 926 9247 1245.311731369363 14354.417220783058 270 0.591527444392 227.41177466784 13165.044097897 1085410.6550159
+3	33730 10142 948 9273 1275.923276079011 14396.181223566952 247 0.341070876304 328.37135525466 13220.59296181 1169209.5093016
+4	43872 10600 975 9194 1320.332354759256 14245.28127571168 259 0.96883812136 213.78463767773 13085.309820139 1116250.4011176
+5	54472 8242 988 9263 1343.707932117982 14371.284775067307 201 1.971584211964 375.52293223342 13180.168446582 1545669.2012388
+6	62714 6967 996 9266 1355.623033410176 14375.31032814989 170 0.878644518757 518.27903802352 13204.878937956 2185667.651287
+
