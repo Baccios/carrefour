@@ -22,9 +22,12 @@ void Generator::initialize(){
     interArrivalDistribution_ = getParentModule()->par("interArrivalDistribution");
     itemsInCartDistribution_ = getParentModule()->par("itemsInCartDistribution");
 
-    //read the mean values of items in a cart and interarrival times
+    //read the mean values of items in a cart and interarrival times (also variance for items in a cart used into lognormal)
     meanInterArrivalTime_ = getParentModule()->par("meanInterArrivalTime");
     meanItemsInACart_ = getParentModule()->par("meanItemsInACart");
+    if(itemsInCartDistribution_ == 1){
+        varianceOfItemsInACart_ = getParentModule()->par("varianceOfItemsInACart");
+    }
 
     //create the feedback message
     beep_ = new cMessage("beep");
@@ -38,12 +41,30 @@ void Generator::handleMessage(cMessage *msg){
     Customer* cust = new Customer("newCustomer");
     cust->setArrivalTime(simTime());
     //put some items in the cart of the customer
-    if(itemsInCartDistribution_ == 0){
+    /*if(itemsInCartDistribution_ == 0){
         //exponential distribution
         //NOTE: Using RNG #1 to generate the flow of service times
         cust->setCartLength(exponential(meanItemsInACart_, 1));
     }else{
+        //lognormal distribution
+        cust->setCartLength(lognormal(meanItemsInACart_,varianceOfItemsInACart_, 1));
         EV << "This type of distribution for items in a cart is not supported yet!";
+    }*/
+    switch(itemsInCartDistribution_){ //switch is better so that we can implement additional distributions
+        case 0 :
+            //exponential distribution
+            //NOTE: Using RNG #1 to generate the flow of service times
+            cust->setCartLength(exponential(meanItemsInACart_, 1));
+            break;
+        case 1 :
+            //lognormal distribution
+            //NOTE: Using RNG #1 to generate the flow of service times
+            cust->setCartLength(lognormal(meanItemsInACart_,varianceOfItemsInACart_, 1));
+            EV<<"The cartLenght is -> "<<cust->getCartLength();
+            break;
+        default :
+            EV << "This type of distribution for items in a cart is not supported yet!";
+
     }
 
     //throw this customer to the tills

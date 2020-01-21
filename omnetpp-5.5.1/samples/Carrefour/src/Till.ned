@@ -21,9 +21,11 @@ simple Till
         int position;
         //for P2 verification
         @signal[waitTime] (type=simtime_t);
-        @statistic[stats_waitTime] (source="waitTime"; record=mean;);
+        //OLD @statistic[stats_waitTime] (source="waitTime"; record=mean;);
+        @statistic[stats_waitTime] (source="waitTime"; record=stats,vector;);
         @signal[responseTime] (type=simtime_t);
-        @statistic[stats_responseTime] (source="responseTime"; record=mean;);
+        //OLD @statistic[stats_responseTime] (source="responseTime"; record=mean;);
+        @statistic[stats_responseTime] (source="responseTime"; record=stats,vector;);
         @signal[numCustomers] (type=long);
         @statistic[stats_numCustomers] (source="numCustomers"; record=timeavg;);
         @signal[numCustomersQueue] (type=long);

@@ -30,6 +30,7 @@ class Generator : public cSimpleModule
   private:
     double meanInterArrivalTime_;
     double meanItemsInACart_;
+    double varianceOfItemsInACart_;
     int interArrivalDistribution_;
     int itemsInCartDistribution_;
     cMessage* beep_;

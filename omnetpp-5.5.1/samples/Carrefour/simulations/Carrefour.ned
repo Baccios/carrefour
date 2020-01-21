@@ -25,6 +25,9 @@ network Carrefour
         //this parameter represents the mean number of items in a cart
         double meanItemsInACart;
         
+        //this parameter represents the variance of items in a cart (used for lognormal distribution)
+        double varianceOfItemsInACart = default(0); //If it's used it will be changed in .ini file so never =0 (default)
+        
         //0: exponential distribution of interarrival times
         int interArrivalDistribution;
         

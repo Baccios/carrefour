@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for Carrefour
+# OMNeT++/OMNEST Makefile for carrefour
 #
 # This file was generated with the command:
 #  opp_makemake -f --deep
 #
 
 # Name of target to be created (-o option)
-TARGET = Carrefour$(D)$(EXE_SUFFIX)
+TARGET = carrefour$(D)$(EXE_SUFFIX)
 TARGET_DIR = .
 
 # User interface (uncomment one) (-u option)
